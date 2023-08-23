@@ -1,0 +1,13 @@
+How to configure SSH in a router:
+=================================
+
+	Router(config)# username indika password ccna // setup a username & password
+
+	Router(config)# line vty 0 15
+	Router(config-line)# login local // enables the login local on the virtual terminals
+
+	Router(config)# ip domain-name ccna.com // adds a domain name
+
+	Router(config)# crypto key generate rsa [360-4096] // 512 is the default value
+
+	Router(config)# transport input [all|none|telnet|ssh] // enables prefered method

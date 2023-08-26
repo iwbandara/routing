@@ -31,7 +31,15 @@ Routing Information Protocol [RIP]:
 
 	R1# show ip route rip // display every RIP learned routes
 
-Enhanced Interior Gateway Routing Protocol [EIGRP]:
-==========================================
+=> Timers of RIP:
 
-=>
+	Hello packets are sent every 30 seconds
+	Hold down timer is 180 seconds
+
+	Flushed after 240 seconds
+
+=> Use of Passive interfaces:
+
+	if any interfaces do not need to advertise RIP.
+
+	R1(config-router)# passive-interface fa0/1 

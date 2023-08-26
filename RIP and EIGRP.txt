@@ -1,0 +1,37 @@
+Routing Information Protocol [RIP]:
+===================================
+
+=> This is an industry-standard routing protocol.
+
+=> Distance vector IGP (uses routing-by-rumor)
+
+=> Uses hop count as its metric. 
+
+=> Maximum hop count is 15. (Anything more than that is considered unreachable)
+
+=> It has three versions:
+	RIPv1 & RIPv2 -> IPv4
+	RIPng (RIP Next Generation) -> IPv6
+
+=> RIPv1 does not support VLSM and CIDR. It uses broadcast messages. (255.255.255.255)
+
+=> RIPv2 supports VLSM and CIDR. It uses 224.0.0.9 multicast address to send messages.
+
+=> RIP configuration:
+
+	R1(config)# router rip
+	R1(config-router)# version 2
+	R1(config-router)# no auto-summary
+	R1(config-router)# network 10.0.0.0
+	R1(config-router)# network 172.16.31.0
+
+=> Verification:
+
+	R1# show ip protocol // display the information on RIP protocol
+
+	R1# show ip route rip // display every RIP learned routes
+
+Enhanced Interior Gateway Routing Protocol [EIGRP]:
+==========================================
+
+=>

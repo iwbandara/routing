@@ -1,0 +1,41 @@
+Enhanced Interior Gateway Routing Protocol [EIGRP]:
+======================================================
+
+=> EIGRP is an enhanced distance vector routing protocol. It does not have certain limitations found in other protocols such as RIP.
+
+=> EIGRP uses the Diffusing update algorithm (DUAL) to identify network paths and enable fast convergence.
+
+=> Configuration:
+	R1(config)# router eigrp <AS-Number>
+	R1(config-router)# eigrp router-id 1.1.1.1 // Manually configure the router id
+	R1(config-router)# network x.x.x.x x.x.x.x // enables the specified network
+	R1(config-router)# no auto-summary // disable network summarization
+
+=> Verification:
+
+	R1# show ip protocols
+
+	R1# show ip eigrp neighbors
+
+	R1# show ip eigrp topology
+
+	R1# show ip eigrp route
+
+=> By default EIGRP uses Bandwidth and Delay when calculating the metric.
+
+=> Metric = 256[(10000000/ Min. B/W)+ (Total Delay/10)]
+
+=> Feasible Distance (FD) is the source router's metric value to the destination.
+
+=> Reported/Advertised Distance (RD/AD) is the neighbor router's metric value to the destination.
+
+=> Successor = the route with the lowest metric value to the destination (the best route)
+
+=> Feasible Successor = the alternate route to the destination, which meets the feasibility condition.
+
+=> EIGRP uses five different types of packets;
+	Hello
+	Request
+	Update
+	Query
+	Reply

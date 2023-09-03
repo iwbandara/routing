@@ -1,0 +1,7 @@
+=> Adding an IP Address to an Inerface
+      Router(config)# interface g0/1 
+      Router(config-if)# ip address 192.168.1.100 255.255.255.0
+
+=> Removing the IP configuration from an Interface:
+      Router(config)# interface Fa0/1
+      Router(config-if)# no ip address

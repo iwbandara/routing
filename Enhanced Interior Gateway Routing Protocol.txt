@@ -25,6 +25,24 @@ Enhanced Interior Gateway Routing Protocol [EIGRP]:
 
 => Metric = 256[(10000000/ Min. B/W)+ (Total Delay/10)]
 
+=> Can change the Bandwidth and delay for the purpose of calculations.
+
+=> How to change the B/W:
+
+	Router(config)# interface G0/1
+	Router(config-if)# bandwidth 500 // the value in Kilobits per second
+
+=> How to change the Delay:
+	
+	Router(config)# interface G0/1
+	Router(config-if)# delay 100
+
+=> What is Delay:-> 
+	
+	-> The time it will take for packets to cross the link and it is a static value.
+	
+	-> Cisco IOS will have default delay values for different interfaces. A FastEthernet interface has a default delay value of 100 usec.
+
 => Feasible Distance (FD) is the source router's metric value to the destination.
 
 => Reported/Advertised Distance (RD/AD) is the neighbor router's metric value to the destination.

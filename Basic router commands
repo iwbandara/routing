@@ -5,3 +5,6 @@
 => Removing the IP configuration from an Interface:
       Router(config)# interface Fa0/1
       Router(config-if)# no ip address
+
+=> How to check the Bandwidth & Delay of an Interface:
+      Router# show interface g0/1

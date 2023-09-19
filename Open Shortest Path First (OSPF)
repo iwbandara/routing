@@ -1,0 +1,13 @@
+OSPF Protocol
+=============
+
+=> This is an open protocol
+
+=> Uses Dijkstra algorithm for cost calculations.
+
+=> Calculation formula; 
+      OSPF Cost = Reference Bandwidth/ Interface Bandwidth (Reference B/W is 100 by default)
+
+=> Administrative distance (AD is 110.
+
+=> It is called a Link-state routing protocol and supports unlimited number of hop count.

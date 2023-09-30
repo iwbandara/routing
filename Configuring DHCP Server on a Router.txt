@@ -1,0 +1,9 @@
+Configuring DHCP Server on a Router:
+------------------------------------
+
+=> R1(config)# ip dhcp excluded-address <start-ip-address> <end-ip-address>
+
+=> R1(config)#ip dhcp pool SERVERS
+   R1(dhcp-config)# network 192.168.1.0 255.255.255.0 or /24
+   R1(dhcp-config)# default-router 192.168.1.254
+   R1(dhcp-config)# dns-server 8.8.8.8

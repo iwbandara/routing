@@ -1,0 +1,19 @@
+Border Gateway Routing Protocol (BGP)
+=====================================
+
+=> A path vector routing protocol
+=> Very slow compared to other protocols used such as OSPF, EIGRP, etc.
+=> Do not advertise routing information to neighbors. Manual configuration is required.
+
+Configuration:
+==============
+
+R1(config)# router bgp 1 // 1 is the Autonomous System (AS) number
+R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighbor router is AS number
+
+Verification:
+=============
+
+R1# show bgp summary
+
+R1# show bgp

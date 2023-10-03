@@ -14,6 +14,6 @@ R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighb
 Verification:
 =============
 
-R1# show ip bgp summary
+R1# show ip bgp summary // To check if bgp neighbors are available
 
-R1# show ip bgp
+R1# show ip bgp // Display the BGP database

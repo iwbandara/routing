@@ -9,7 +9,10 @@ Configuration:
 ==============
 
 R1(config)# router bgp 1 // 1 is the Autonomous System (AS) number
+
 R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighbor router is AS number
+
+R1(config-router)# network 200.0.0.0 mask 255.255.255.0 // Advertises the specified network
 
 Verification:
 =============

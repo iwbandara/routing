@@ -4,6 +4,9 @@ Border Gateway Routing Protocol (BGP)
 => A path vector routing protocol
 => Very slow compared to other protocols used such as OSPF, EIGRP, etc.
 => Do not advertise routing information to neighbors. Manual configuration is required.
+=> Autonomous System (AS) number is assigned by IANA.  Originally it was 2-bytes, means ranging from 0 - 65535.
+=> RFC 4893 defines 4-bytes for new AS number, which is 32-bits.
+=> There are two (02) flavours of AS numbers, Private & Public.
 
 Configuration:
 ==============
@@ -13,6 +16,11 @@ R1(config)# router bgp 1 // 1 is the Autonomous System (AS) number
 R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighbor router is AS number
 
 R1(config-router)# network 200.0.0.0 mask 255.255.255.0 // Advertises the specified network
+
+By default eBGP will have a value of 1 for TTL, which means eBGP router can reach on the directly connected routers. If they are more than one hop away we need to 
+increment the TTL value with the "ebgp-multihop" command in router mode.
+
+R1(config-router)# neighbor X.X.X.X ebgp-multihop 2 // Increases the TTL value to 2.
 
 Verification:
 =============

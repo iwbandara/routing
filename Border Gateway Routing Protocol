@@ -31,3 +31,11 @@ Verification:
 R1# show ip bgp summary // To check if bgp neighbors are available
 
 R1# show ip bgp // Display the BGP database
+
+BGP Path Selection:
+==================
+
+=> When selecting path in BGP multiple attributes are taken into consideration.
+=> Four (04) of them are important. They are listed below as per the order;
+      Weight -> Local Preference -> AS path -> MED
+

@@ -1,0 +1,32 @@
+Manual Time Setting:
+====================
+
+R1# clock set 09:00:00 25 Dec 2023
+
+Configuration:
+==============
+
+R1(config)# ntp master 1
+
+R2(config)# ntp server 192.168.1.2
+
+Verifications:
+==============
+
+R2#show ntp status 
+Clock is synchronized, stratum 2, reference is 192.168.12.1   
+nominal freq is 250.0000 Hz, actual freq is 250.0000 Hz, precision is 2**18
+ntp uptime is 4500 (1/100 of seconds), resolution is 4000
+reference time is E933C440.17A6D0A4 (09:05:04.092 UTC Mon Dec 25 2023)
+clock offset is 7.8545 msec, root delay is 40.13 msec
+root dispersion is 4034.80 msec, peer dispersion is 1937.52 msec
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is 0.000000000 s/s
+system poll interval is 64, last update was 34 sec ago.
+R2#
+
+R2#show ntp associations 
+
+  address         ref clock       st   when   poll reach  delay  offset   disp
+*~192.168.12.1    .LOCL.           1     27     64     1 23.878  -3.377 937.74
+ * sys.peer, # selected, + candidate, - outlyer, x falseticker, ~ configured
+R2#

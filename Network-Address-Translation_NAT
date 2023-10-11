@@ -1,5 +1,7 @@
 => NAT or Network Address Translation is a method used to connect Private IP Address to Public IP Addresses.
 
+=> “NAT allows a host that does not have a valid registered IP address to communicate with other hosts through the Internet”
+
 => NAT can be implemented in three (03) methods;
 
     1. Static NAT
@@ -7,3 +9,10 @@
     3. PAT or NAT Overloading.
 
 => Out of the above three methods PAT is used widely in current computer networks.
+
+=> NAT terms:
+
+    * Inside local address – The IP address assigned to a host on the inside network. The address is usually not an IP address assigned by the Internet Network Information Center (InterNIC) or service provider. This address is likely to be an RFC 1918 private address.
+    * Inside global address – A legitimate IP address assigned by the InterNIC or service provider that represents one or more inside local IP addresses to the outside world.
+    * Outside local address – The IP address of an outside host as it is known to the hosts on the inside network.
+    * Outside global address – The IP address assigned to a host on the outside network. The owner of the host assigns this address.

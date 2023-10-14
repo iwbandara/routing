@@ -1,8 +1,9 @@
 Enhanced Interior Gateway Routing Protocol [EIGRP]:
 ======================================================
 
-=> EIGRP is an enhanced distance vector routing protocol. It does not have certain limitations found in other protocols such as RIP.
-
+=> EIGRP is an enhanced distance vector routing protocol. It does not have certain limitations found in other protocols such as RIP, further not susceptible for routing loops.
+=> Uses multicast and unicast messages. Does not use broadcast messages.
+=> Cisco proprietary routing protocol.
 => EIGRP uses the Diffusing update algorithm (DUAL) to identify network paths and enable fast convergence.
 
 => Configuration:

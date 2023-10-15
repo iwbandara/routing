@@ -7,6 +7,10 @@ Enhanced Interior Gateway Routing Protocol [EIGRP]:
 => EIGRP uses the Diffusing update algorithm (DUAL) to identify network paths and enable fast convergence.
 
 => Configuration:
+
+	=> When configuring EIGRP the AS number must match with neighbor routers to create an adjacency.
+	=> AS numbers range from 1 - 65535.
+	
 	R1(config)# router eigrp <AS-Number>
 	R1(config-router)# eigrp router-id 1.1.1.1 // Manually configure the router id
 	R1(config-router)# network x.x.x.x x.x.x.x // enables the specified network
@@ -18,7 +22,7 @@ Enhanced Interior Gateway Routing Protocol [EIGRP]:
 
 	R1# show ip eigrp neighbors
 
-	R1# show ip eigrp topology
+	R1# show ip eigrp topology // Display the topology table 
 
 	R1# show ip eigrp route
 

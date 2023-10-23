@@ -34,7 +34,9 @@ Configuration
 
 => OSPF works with concept or Areas, the default area is Area 0. Also called as backbone area.
 
+=> OSPF does not support automatic summarization by default like EIGRP protocol. 
 
+=> OSPF can summarize routes only on ABRs and ASBRs.
 
 
 

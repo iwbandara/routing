@@ -3,12 +3,12 @@ OSPF Protocol
 
 => This is an open protocol
 
-=> Uses Dijkstra algorithm for cost calculations.
+=> Uses Dijkstra algorithm for cost calculations. It is also called Shortest Path First (SPF).
 
 => Calculation formula; 
       OSPF Cost = Reference Bandwidth/ Interface Bandwidth (Reference B/W is 100 by default)
 
-=> Administrative distance (AD is 110.
+=> Administrative distance (AD is 110).
 
 => It is called a Link-state routing protocol and supports unlimited number of hop count.
 
@@ -29,4 +29,15 @@ Configuration
 
 => In case if you do not have a default route configured, can use the below command.
       Router(config-router)# default-information originate always
+
+=> In multi-access network a Designated Router (DR) and a Backup Designated Router (BDR) is elected. Thet will have full adjacency with other routers which are called DROTHER.
+
+=> OSPF works with concept or Areas, the default area is Area 0. Also called as backbone area.
+
+
+
+
+
+
+
 

@@ -1,0 +1,8 @@
+Syslog Configuration:
+=====================
+
+  R1(config)# logging on // enables logging of Syslog messages
+
+  R1(config)# logging 192.168.10.100 // destination where the messages are saved
+
+  R1(config)# logging trap debugging //

@@ -13,3 +13,15 @@ Verification:
 =============
 
   # show logging
+
+=> When logging through syslog there are eight (08) severity levels from 1 to 7.
+
+=> Syslog severity levels;
+  0 => emergencies
+  1 => alerts 
+  2 => critical   
+  5 => errors 
+  4 => warnings
+  5 => notifications
+  6 => informational  
+  7 => debugging

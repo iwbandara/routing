@@ -1,0 +1,11 @@
+Simple Network Management Protocol (SNMP):
+==========================================
+
+=> SNMP helps manage devices over a network.
+
+=> Managed Devices: are the devices being managed by the SNMP such as switches, firewalls, and routers.
+
+=> Network Management Stations (NMSs): are the servers manage the devices.
+    NSMs receives messages from managed devices.
+    NMSs changes settings on managed devices.
+    NMSs check the status of managed devices.

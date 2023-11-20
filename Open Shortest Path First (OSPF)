@@ -1,7 +1,7 @@
 OSPF Protocol
 =============
 
-=> This is an open protocol
+=> This is an open protocol.
 
 => Uses Dijkstra algorithm for cost calculations. It is also called Shortest Path First (SPF).
 
@@ -18,8 +18,10 @@ OSPF Protocol
 
 => Router ID is an IP Address used to identify the routers in OSPF process.
 
-Configuration
-=============
+=> Has seven states. They are, Down->Init->2-Way->ExStart->Exchange->Loading->Full
+
+Configuration:
+==============
 
 =>       Router(config)# router ospf <process_number> (0 - 65535)
          Router(config-router)# router-id X.X.X.X 

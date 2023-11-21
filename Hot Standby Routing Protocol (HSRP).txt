@@ -1,0 +1,37 @@
+Hot Standby Routing Protocol (HSRP):
+====================================
+
+=> Cisco proprietary protocol.
+
+=> RFC 2281
+
+=> Active and Standby routers
+
+=> Version 1 MAC Address: 0000.0c07.acXX
+
+=> Version 2 MAC Address: 0000.0c9f.fXXX
+
+=> Preempt option not enabled by default
+
+=> Default hello interval: 3 sec
+
+=> Default holdtime: 10 sec
+
+=> Version 1 multicast address: 224.0.0.2
+
+=> Version 2 multicast address: 224.0.0.102
+
+=> Cannot use a physical interface assigned IP Address as Virtual IP Address
+
+=> Configuration:
+   --------------
+	R1(config)# standby <group-no> ip <virtual-ip-address>
+	R1(config)# standby <group-no> priority 110 ( Default value is 100)
+	R1(config)# standby preempt
+
+=> Verification:
+   -------------
+
+	R1# show standby 
+
+	R1# show standby brief

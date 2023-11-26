@@ -25,9 +25,13 @@ Hot Standby Routing Protocol (HSRP):
 
 => Configuration:
    --------------
-	R1(config)# standby <group-no> ip <virtual-ip-address>
-	R1(config)# standby <group-no> priority 110 ( Default value is 100)
-	R1(config)# standby preempt
+	R1(config-if)# standby <group-no> ip <virtual-ip-address>
+	R1(config-if)# standby <group-no> priority 110 ( Default value is 100)
+	R1(config-if)# standby preempt
+
+=> Configuration of a clear text password authentication:
+
+	R1(config-if)# standby <group-no> authentication <string>
 
 => Verification:
    -------------

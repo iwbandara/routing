@@ -17,7 +17,7 @@ Hot Standby Routing Protocol (HSRP):
 
 => Default holdtime: 10 sec
 
-=> Version 1 multicast address: 224.0.0.2
+=> Version 1 multicast address: 224.0.0.2 using UDP port 1985
 
 => Version 2 multicast address: 224.0.0.102
 

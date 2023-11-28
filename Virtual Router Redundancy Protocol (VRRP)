@@ -1,0 +1,22 @@
+Virtual Router Redundancy Protocol (VRRP):
+==========================================
+
+=> VRRP is very similar to HSRP.
+
+=> It is an open protocol.
+
+=> Active router is called Master & standby router is called Backup.
+
+=> VRRP sends its advertisements using 224.0.0.18 multicast address.
+
+=> The virtual router MAC address is of the form 0000.5e00.01XX, where XX is the group no in Hexadecimal.
+
+=> VRRP group numbers range from 0 to 255.
+
+=> Router priority range from 1 to 254. Default value is 100.
+
+Configuration:
+
+  R1(config)# interface <interface-number>
+  R1(config-if)# vrrp <group-no> ip <virtual-ip-address>
+  R1(config-if)# vrrp <group-no> priority <value> // ranges from 1 to 254 (Default 100)

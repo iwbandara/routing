@@ -33,6 +33,12 @@ Hot Standby Routing Protocol (HSRP):
 *** Version 2 supports 0-4095 groups, while version 1 supports 0-255 groups.
 *** Version 2 MAC Address is 0000.0c9f.fXXX while version 1 MAC address is 0000.0c07.acXX (XXX & XX is the group no is Hexadecimal value) 
 
+=> Interface Tracking: This will help to track the interfaces which are facing the Internet.
+
+	R1(config-if)# standby <group-no> track <interface-name> // this will decrease the priority value by 10 (default)
+
+	R1(config-if)# standby <group-no> track <interface-name> 20 // decrease the priority value by 20
+
 => Configuration of a clear text password authentication:
 
 	R1(config-if)# standby <group-no> authentication <string>

@@ -20,3 +20,7 @@ Configuration:
   R1(config)# interface <interface-number>
   R1(config-if)# vrrp <group-no> ip <virtual-ip-address>
   R1(config-if)# vrrp <group-no> priority <value> // ranges from 1 to 254 (Default 100)
+
+Verification:
+
+  R1# show vrrp

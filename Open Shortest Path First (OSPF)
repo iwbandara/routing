@@ -14,7 +14,7 @@ OSPF Protocol
 
 => Hello packets are used update the neighbors. Their default timers are, Hello->10s & Dead->40s
 
-=> To become ospf neighbors both hello and dead timers should be matched.
+=> To become ospf neighbors both hello and dead timers should be matched. When sending "Hello" packets they are sent to a multicast address of 224.0.0.5.
 
 => Router ID is an IP Address used to identify the routers in OSPF process.
 

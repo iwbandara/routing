@@ -23,9 +23,11 @@ OSPF Protocol
 Configuration:
 ==============
 
-=>       Router(config)# router ospf <process_number> (0 - 65535)
+=>       Router(config)# router ospf <process_number> (0 - 65535) // This value is locally significant. Must not match with other routers
          Router(config-router)# router-id X.X.X.X 
          Router(config-router)# network X.X.X.X A.A.A.A area 0 (X.X.X.X => Network Address, A.A.A.A => Wildcard Mask)
+         Router(config-router)# auto-cost reference-bandwidth <1-4294967> // This value must match in with all participating routers
+         Router(config-router)# passive-interface <interface-name> // Interface will stop sending Hello out this reducing bandwidth as well as improve security.
 
 => Router(config-router)# default-information originate // Educate other routers to forward traffic which they do not know the destination
 

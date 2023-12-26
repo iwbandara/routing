@@ -51,6 +51,12 @@ Verification:
 
 => OSPF can summarize routes only on ABRs and ASBRs.
 
+=> OSPF Stub area types:
+      1. Stub Areas
+      2. Totally Stub Areas
+      3. Not So Stuby Areas (NSSA)
+      4. Totally NSSA
+
 
 
 

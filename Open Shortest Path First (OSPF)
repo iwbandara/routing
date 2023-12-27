@@ -68,6 +68,10 @@ Verification:
             Router(config)# router ospf 10
             Router(config-router)# area 10 range 172.16.0.0 255.255.252.0
 
+=> How to make an area a stub area,
+      Router(config)# router ospf 1
+      Router(config-router)# area 1 stub
+
 
 
 

@@ -52,12 +52,21 @@ Verification:
 => OSPF can summarize routes only on ABRs and ASBRs.
 
 => OSPF Stub area types:
-      1. Stub Areas
-      2. Totally Stub Areas
-      3. Not So Stuby Areas (NSSA)
-      4. Totally NSSA
+      1. Stub Areas // No Type 5 LSAs (External LSAs) & No ASBR allowed
+      2. Totally Stub Areas // No Type 3 & Type 5 LSAs and No ASBR allowed
+      3. Not So Stuby Areas (NSSA) // No Type 5 LSAs & ASBR allowed
+      4. Totally NSSA // No Type 3 and Type 5 LSAs & ASBR allowed
 
+=> OSPF Route Summarization:
+      Can be done on an ABR or an ASBR, but the methods are different.
 
+      On an ASBR:      
+            Router(config)# router ospf 10
+            Router(config-router)# summary-address 172.16.0.0 255.255.252.0
+
+      On an ABR:
+            Router(config)# router ospf 10
+            Router(config-router)# area 10 range 172.16.0.0 255.255.252.0
 
 
 

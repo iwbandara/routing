@@ -60,11 +60,13 @@ Verification:
 => OSPF Route Summarization:
       Can be done on an ABR or an ASBR, but the methods are different.
 
-      On an ASBR:      
+      On an ASBR:
+      -----------
             Router(config)# router ospf 10
             Router(config-router)# summary-address 172.16.0.0 255.255.252.0
 
       On an ABR:
+      ----------
             Router(config)# router ospf 10
             Router(config-router)# area 10 range 172.16.0.0 255.255.252.0
 
@@ -72,6 +74,16 @@ Verification:
       Router(config)# router ospf 1
       Router(config-router)# area 1 stub
 
+=> How to make an area a totally stub area,
+      On the ABR:
+      -----------
+            Router(config)# router ospf 1
+            Router(config-router)# area 1 stub no-summary // this will block Type 3 LSAs into the area making it a Totally stub area
+
+      On other Area 1 routers:
+      ------------------------
+            Router(config)# router ospf 1
+            Router(config-router)# area 1 stub
 
 
 

@@ -85,5 +85,13 @@ Verification:
             Router(config)# router ospf 1
             Router(config-router)# area 1 stub
 
+=> How to configure OSPF for both IP Address families;
 
+      Router(config)# router ospfv3 100
+      Router(config-router)# address-family ipv4
+      Router(config-router-af)# address-family ipv6
+
+      Router(config)# interface g0/1
+      Router(config-if)# ospfv3 1 ipv4 area 0
+      Router(config-if)# ospfv3 1 ipv6 area 0
 

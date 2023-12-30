@@ -4,7 +4,7 @@ Border Gateway Routing Protocol (BGP)
 => This is the routing protocol used in the Internet.
 => Known as an External Gateway Protocol (EGP). It is the only EGP we have.
 => A path-vector routing protocol
-=> Very slow compared to other protocols used such as OSPF, EIGRP, etc.
+=> Very slow compared to other protocols such as RIP, OSPF, EIGRP, etc.
 => Do not advertise routing information to neighbors. Manual configuration is required.
 => BGP communicate beween Autonomous Systems (ASs).
 => An Autonomous System in a collection of networks under a single administrative domain.
@@ -13,7 +13,7 @@ Border Gateway Routing Protocol (BGP)
 => There are two (02) flavours of AS numbers, Private & Public.
 => When performing neighborship, the router which has lowest RID become the ACTIVE router (port no greater than 1023) and other router become the passive router which 
    has TCP 179 port always.
-
+=> BGP protocol does not send incremental updates as done by other routers.
 
 Configuration:
 ==============

@@ -11,6 +11,7 @@ Border Gateway Routing Protocol (BGP)
 => Autonomous System (AS) number is assigned by IANA.  Originally it was 2-bytes (16-bits), means ranging from 0 - 65535.
 => RFC 4893 defines 4-bytes for new AS number, which is 32-bits.
 => There are two (02) flavours of AS numbers, Private & Public.
+=> The ASNs used must be unique since they are used to prevent loops. If a router learns its own AS number in a packet it will discard it.
 => When performing neighborship, the router which has lowest RID become the ACTIVE router (port no greater than 1023) and other router become the passive router which 
    has TCP 179 port always.
 => BGP protocol does not send incremental updates as done by other routers.

@@ -19,11 +19,9 @@ Border Gateway Routing Protocol (BGP)
 Configuration:
 ==============
 
-R1(config)# router bgp 1 // 1 is the Autonomous System (AS) number
-
-R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighbor router is AS number
-
-R1(config-router)# network 200.0.0.0 mask 255.255.255.0 // Advertises the specified network
+   R1(config)# router bgp 1 // 1 is the Autonomous System (AS) number
+   R1(config-router)# neighbor 192.168.12.1 remote-as 2 // IP Address of the neighbor router is AS number
+   R1(config-router)# network 200.0.0.0 mask 255.255.255.0 // Advertises the specified network. When specifying you need to specify the exact network to work.
 
 By default eBGP will have a value of 1 for TTL, which means eBGP router can reach on the directly connected routers. If they are more than one hop away we need to 
 increment the TTL value with the "ebgp-multihop" command in router mode.
@@ -33,9 +31,9 @@ R1(config-router)# neighbor X.X.X.X ebgp-multihop 2 // Increases the TTL value t
 Verification:
 =============
 
-R1# show ip bgp summary // To check if bgp neighbors are available
+   R1# show ip bgp summary // To check if bgp neighbors are available
 
-R1# show ip bgp // Display the BGP database
+   R1# show ip bgp // Display the BGP database
 
 BGP Path Selection:
 ==================

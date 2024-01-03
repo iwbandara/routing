@@ -41,4 +41,5 @@ BGP Path Selection:
 => When selecting path in BGP multiple attributes are taken into consideration.
 => Four (04) of them are important. They are listed below as per the order;
       Weight -> Local Preference -> AS path -> MED
+=> BGP Path selection -> We(1) Love(2) Oranges(3) As(4) Oranges(5) Mean(6) Pure(7) Refreshment(8)
 

@@ -16,6 +16,8 @@ Border Gateway Routing Protocol (BGP)
    has TCP 179 port always.
 => BGP protocol does not send incremental updates as done by other routers.
 
+=> By default BGP TTL is 1. You can change this value it needed. "ebgp-multihop" command can be used.
+
 Configuration:
 ==============
 

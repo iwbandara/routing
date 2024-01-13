@@ -7,3 +7,8 @@ Configuring DHCP Server on a Router:
    R1(dhcp-config)# network 192.168.1.0 255.255.255.0 or /24
    R1(dhcp-config)# default-router 192.168.1.254
    R1(dhcp-config)# dns-server 8.8.8.8
+   R1(dhcp-config)# ip dhcp exclude 192.168.1.100 // DHCP server will not release this IP Address to a client
+   R1(dhcp-config)# lease 1 4 30 // This is the assigned lease time for clients. Here time duration is 1 Day 4 Hours & 30 Minutes
+
+=> Verify DHCP clients:
+   R1# show ip dhcp binding

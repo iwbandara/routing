@@ -1,0 +1,30 @@
+How to configure Dynamic NAT:
+-----------------------------
+
+In this NAT process a pool of IP Addresses are used to translate private IP Address to Public IP Addresses.
+
+Below if the configuration steps performed at the NAT router:
+-------------------------------------------------------------
+
+  R1> enable
+  R1# configure terminal
+
+# Define the inside and the outside NAT interfaces at the router
+
+  R1(config)# interface g0/1
+  R1(config-if)# ip nat inside
+  R1(config)# interface g0/2
+  R1(config-if)# ip nat outside
+  R1(config-if)# exit
+
+# Define an access list to identify the network traffic
+
+  R1(config)# access-list 1 permit 10.10.10.0 0.0.0.255
+
+# Define the Public IP Address pool for use
+
+  R1(config)# ip nat pool POOL_NAT 4.4.4.2 4.4.4.8 netmask 255.255.255.0
+
+# Configure the NAT on the router
+
+  R1(config)# ip nat inside source list 1 pool POOL_NAT

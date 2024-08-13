@@ -1,3 +1,5 @@
+=> NAT stands for Network Address Translation.
+
 => NAT or Network Address Translation is a method used to connect Private IP Address to Public IP Addresses.
 
 => “NAT allows a host that does not have a valid registered IP address to communicate with other hosts through the Internet”
